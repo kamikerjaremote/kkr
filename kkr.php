@@ -14,3 +14,10 @@
  * For detailed information regards to the licensing of
  * this software, please review the license.txt
 */
+
+/**
+ * Add shortcode for partner (automix.ai)
+ */
+add_shortcode('kkr_partner_automix_builder', function( $atts ){
+    include plugin_dir_path( __FILE__ ) . 'src/View/Automix/builder.php';
+});
