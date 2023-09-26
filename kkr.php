@@ -5,7 +5,7 @@
  * Description:       Kami Kerja Remote WordPress Plugin
  * Version:           0.0.1
  * Author:            Agung Sundoro
- * Author URI:        https://agung2001.github.io
+ * Author URI:        https://github.com/kamikerjaremote
  * License:           GPL-3.0
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
  *
@@ -19,5 +19,7 @@
  * Add shortcode for partner (automix.ai)
  */
 add_shortcode('kkr_partner_automix_builder', function( $atts ){
-    include plugin_dir_path( __FILE__ ) . 'src/View/Automix/builder.php';
+    ob_start();
+        include plugin_dir_path( __FILE__ ) . 'src/View/Automix/builder.php';
+    return ob_get_clean();
 });
